@@ -50,10 +50,10 @@ rm -rf 3rdparty
     -DQuotient_INSTALL_EXAMPLE:BOOL=OFF \
     -DQuotient_ENABLE_E2EE:BOOL=ON \
     -DCMAKE_INSTALL_INCLUDEDIR:PATH="include/%{appname}"
-%make_build
+%ninja_build
 
 %install
-%make_install -C build
+%ninja_install -C build
 rm -rf %{buildroot}%{_datadir}/ndk-modules
 
 %files
