@@ -1,3 +1,7 @@
+%define major 0
+%define libpackage %mklibname quotient %{major}
+%define devpackage %mklibname -d quotient
+
 %global appname Quotient
 %global libname lib%{appname}
 
@@ -29,12 +33,20 @@ for Matrix. libQuotient is a library that enables client applications. It is
 the backbone of Quaternion, Spectral and other projects. Versions 0.5.x and
 older use the previous name - libQMatrixClient.
 
-%package devel
+%package -n %{libpackage}
+Group:		System/Libraries
+Summary:	Library for the Quotient project aims to produce a Qt5-based SDK to develop applications.
+
+%description -n %{libpackage}
+Library for the Quotient project aims to produce a Qt5-based SDK to develop applications
+for Matrix. libQuotient is a library that enables client applications.
+
+%package -n %{devpackage}
 Summary: Development files for %{name}
+Requires:	%{libpackage} = %{EVRD}
 
 
-
-%description devel
+%description -n %{devpackage}
 This is development files for Quotient. This project aims to produce a Qt5-based SDK to develop applications
 for Matrix. libQuotient is a library that enables client applications. It is
 the backbone of Quaternion, Spectral and other projects. Versions 0.5.x and
@@ -57,12 +69,12 @@ rm -rf 3rdparty
 %ninja_install -C build
 rm -rf %{buildroot}%{_datadir}/ndk-modules
 
-%files
+%files -n %{libpackage}
 %license COPYING
 %doc README.md CONTRIBUTING.md SECURITY.md
-%{_libdir}/%{libname}.so.0*
+%{_libdir}/%{libname}.so.%{major}*
 
-%files devel
+%files -n %{devpackage}
 %{_includedir}/%{appname}/
 %{_libdir}/cmake/%{appname}/
 %{_libdir}/pkgconfig/%{appname}.pc
