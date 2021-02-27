@@ -5,7 +5,7 @@
 %global appname Quotient
 %global libname lib%{appname}
 
-%define git 20201219
+%define git 20210226
 
 Name: libquotient
 Version: 0.7.0
