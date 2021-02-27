@@ -55,7 +55,7 @@ the backbone of Quaternion, Spectral and other projects. Versions 0.5.x and
 older use the previous name - libQMatrixClient.
 
 %prep
-%autosetup -n %{libname}-%{!?git:%{version}}
+%autosetup -n %{libname}-%{?git:%{git}}%{!?git:%{version}}
 rm -rf 3rdparty
 
 %build
