@@ -8,7 +8,7 @@
 %define git 20210226
 
 Name: libquotient
-Version: 0.7.0
+Version: 0.6.5
 Release: %{?git:0.%{git}.}1
 
 License: LGPLv2+
@@ -55,7 +55,7 @@ the backbone of Quaternion, Spectral and other projects. Versions 0.5.x and
 older use the previous name - libQMatrixClient.
 
 %prep
-%autosetup -n %{libname}-%{?git:%{git}}%{!?git:%{version}}
+%autosetup -n %{libname}-%{version}
 rm -rf 3rdparty
 
 %build
