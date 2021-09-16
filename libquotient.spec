@@ -3,7 +3,7 @@
 %define libname %mklibname %{appname} %{major}
 %define develname %mklibname -d %{appname}
 
-%define git 20210616
+%define git 20210916
 
 Name:		libquotient
 Version:	0.7.0
