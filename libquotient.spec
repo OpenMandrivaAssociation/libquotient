@@ -3,7 +3,7 @@
 %define libname %mklibname %{appname} %{major}
 %define develname %mklibname -d %{appname}
 
-%define git 20210916
+%define git 20211112
 
 Name:		libquotient
 Version:	0.7.0
@@ -55,7 +55,7 @@ the backbone of Quaternion, Spectral and other projects. Versions 0.5.x and
 older use the previous name - libQMatrixClient.
 
 %prep
-%autosetup -n lib%{appname}-%{?git:master}%{!?git:%{version}}
+%autosetup -n lib%{appname}-%{git}
 rm -rf 3rdparty
 
 %build
