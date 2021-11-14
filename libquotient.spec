@@ -3,7 +3,8 @@
 %define libname %mklibname %{appname} %{major}
 %define develname %mklibname -d %{appname}
 
-%define git 20210916
+# With stable release 0.7.0 plsese don't go with git again (as long as it is not very necessary), just switch to stable release.
+%define git 20211112
 
 Name:		libquotient
 Version:	0.7.0
@@ -12,7 +13,6 @@ Group:		System/Libraries
 License:	LGPLv2+
 URL:		https://github.com/quotient-im/libQuotient
 Summary:	Qt5 library to write cross-platform clients for Matrix
-# git archive --format=tar.gz -o ../libQuotient-$(date +%Y%m%d).tar.gz --prefix=libQuotient-master/ master
 Source0:	https://github.com/quotient-im/libQuotient/archive/%{?git:master}%{!?git:%{version}}/lib%{appname}-%{?git:%{git}}%{!?git:%{version}}.tar.gz
 BuildRequires:	cmake(Olm)
 BuildRequires:	cmake(QtOlm)
@@ -55,7 +55,7 @@ the backbone of Quaternion, Spectral and other projects. Versions 0.5.x and
 older use the previous name - libQMatrixClient.
 
 %prep
-%autosetup -n lib%{appname}-%{?git:master}%{!?git:%{version}}
+%autosetup -n lib%{appname}-%{git}
 rm -rf 3rdparty
 
 %build
