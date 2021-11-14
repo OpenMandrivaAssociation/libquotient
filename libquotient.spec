@@ -12,7 +12,6 @@ Group:		System/Libraries
 License:	LGPLv2+
 URL:		https://github.com/quotient-im/libQuotient
 Summary:	Qt5 library to write cross-platform clients for Matrix
-# git archive --format=tar.gz -o ../libQuotient-$(date +%Y%m%d).tar.gz --prefix=libQuotient-master/ master
 Source0:	https://github.com/quotient-im/libQuotient/archive/%{?git:master}%{!?git:%{version}}/lib%{appname}-%{?git:%{git}}%{!?git:%{version}}.tar.gz
 BuildRequires:	cmake(Olm)
 BuildRequires:	cmake(QtOlm)
