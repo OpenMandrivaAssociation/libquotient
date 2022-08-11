@@ -4,7 +4,7 @@
 %define develname %mklibname -d %{appname}
 
 # With stable release 0.7.0 please don't go with git again (as long as it is not very necessary), just switch to stable release.
-%define git 20220218
+%define git 20220811
 
 Name:		libquotient
 Version:	0.7.0
