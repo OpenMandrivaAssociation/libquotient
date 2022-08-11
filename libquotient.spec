@@ -23,6 +23,7 @@ BuildRequires:	cmake(Qt5Multimedia)
 BuildRequires:	cmake(Qt5Concurrent)
 BuildRequires:	cmake(Qt5LinguistTools)
 BuildRequires:	cmake(Qt5Test)
+BuildRequires:	cmake(Qt5Keychain)
 BuildRequires:	qmake5
 BuildRequires:	ninja
 BuildRequires:	cmake
