@@ -25,6 +25,7 @@ BuildRequires:	cmake(Qt5LinguistTools)
 BuildRequires:	cmake(Qt5Sql)
 BuildRequires:	cmake(Qt5Test)
 BuildRequires:	cmake(Qt5Keychain)
+BuildRequires:	pkgconfig(openssl)
 BuildRequires:	qmake5
 BuildRequires:	ninja
 BuildRequires:	cmake
