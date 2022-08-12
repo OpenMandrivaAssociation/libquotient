@@ -8,7 +8,7 @@
 
 Name:		libquotient
 Version:	0.7.0
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 Group:		System/Libraries
 License:	LGPLv2+
 URL:		https://github.com/quotient-im/libQuotient
@@ -49,6 +49,10 @@ for Matrix. libQuotient is a library that enables client applications.
 Summary:	Development files for %{name}
 Group:		Development/C++
 Requires:	%{libname} = %{EVRD}
+# The dependency generator detects cmake(OpenSSL),
+# but that's provided by cmake rather than OpenSSL.
+# So we need to help it out a little...
+Requires:	pkgconfig(openssl)
 %rename	%{_lib}quotient-devel
 
 %description -n %{develname}
