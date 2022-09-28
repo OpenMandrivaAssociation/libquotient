@@ -4,11 +4,11 @@
 %define develname %mklibname -d %{appname}
 
 # With stable release 0.7.0 please don't go with git again (as long as it is not very necessary), just switch to stable release.
-%define git 20220811
+%define git 20220928
 
 Name:		libquotient
 Version:	0.7.0
-Release:	%{?git:0.%{git}.}2
+Release:	%{?git:0.%{git}.}1
 Group:		System/Libraries
 License:	LGPLv2+
 URL:		https://github.com/quotient-im/libQuotient
