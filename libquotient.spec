@@ -62,7 +62,7 @@ the backbone of Quaternion, Spectral and other projects. Versions 0.5.x and
 older use the previous name - libQMatrixClient.
 
 %prep
-%autosetup -n libQuotient-dev
+%autosetup -n libQuotient-%{version}
 rm -rf 3rdparty
 
 %build
