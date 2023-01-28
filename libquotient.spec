@@ -4,10 +4,10 @@
 %define develname %mklibname -d %{appname}
 
 # With stable release 0.7.0 please don't go with git again (as long as it is not very necessary), just switch to stable release.
-%define git 20221202
+#define git 20221202
 
 Name:		libquotient
-Version:	0.7.0
+Version:	0.7.1
 Release:	%{?git:0.%{git}.}1
 Group:		System/Libraries
 License:	LGPLv2+
@@ -62,7 +62,7 @@ the backbone of Quaternion, Spectral and other projects. Versions 0.5.x and
 older use the previous name - libQMatrixClient.
 
 %prep
-%autosetup -n libQuotient-dev
+%autosetup -n libQuotient-%{version}
 rm -rf 3rdparty
 
 %build
