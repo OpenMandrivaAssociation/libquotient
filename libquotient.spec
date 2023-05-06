@@ -66,8 +66,8 @@ older use the previous name - libQMatrixClient.
 rm -rf 3rdparty
 
 %build
-export CC=gcc
-export CXX=g++
+#export CC=gcc
+#export CXX=g++
 %cmake -G Ninja \
     -DCMAKE_BUILD_TYPE=Release \
     -DQuotient_INSTALL_TESTS:BOOL=OFF \
