@@ -7,7 +7,7 @@
 #define git 20221202
 
 Name:		libquotient
-Version:	0.7.1
+Version:	0.8.0
 Release:	%{?git:0.%{git}.}1
 Group:		System/Libraries
 License:	LGPLv2+
@@ -66,6 +66,9 @@ older use the previous name - libQMatrixClient.
 rm -rf 3rdparty
 
 %build
+# As of libquotient 0.7 and Clang 16, crashing during compilation.
+export CC=gcc
+export CXX=g++
 %cmake -G Ninja \
     -DCMAKE_BUILD_TYPE=Release \
     -DQuotient_INSTALL_TESTS:BOOL=OFF \
