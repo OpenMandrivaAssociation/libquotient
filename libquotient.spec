@@ -66,6 +66,7 @@ older use the previous name - libQMatrixClient.
 rm -rf 3rdparty
 
 %build
+# As of libquotient 0.7 and Clang 16, crashing during compilation.
 export CC=gcc
 export CXX=g++
 %cmake -G Ninja \
