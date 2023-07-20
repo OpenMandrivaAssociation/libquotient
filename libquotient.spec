@@ -7,7 +7,7 @@
 #define git 20221202
 
 Name:		libquotient
-Version:	0.7.2
+Version:	0.8.0
 Release:	%{?git:0.%{git}.}1
 Group:		System/Libraries
 License:	LGPLv2+
