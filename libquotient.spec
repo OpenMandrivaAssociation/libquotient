@@ -3,7 +3,7 @@
 %define libname %mklibname %{appname} %{major}
 %define develname %mklibname -d %{appname}
 %define libqt6name %mklibname %{appname}Qt6
-%define deveqt6lname %mklibname -d %{appname}Qt6
+%define develqt6name %mklibname -d %{appname}Qt6
 # With stable release 0.7.0 please don't go with git again (as long as it is not very necessary), just switch to stable release.
 #define git 20221202
 
