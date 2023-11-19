@@ -9,7 +9,7 @@
 
 Name:		libquotient
 Version:	0.8.1.2
-Release:	%{?git:0.%{git}.}2
+Release:	%{?git:0.%{git}.}3
 Group:		System/Libraries
 License:	LGPLv2+
 URL:		https://github.com/quotient-im/libQuotient
@@ -144,7 +144,7 @@ rm -rf %{buildroot}%{_datadir}/ndk-modules
 %{_libdir}/lib*%{appname}.so.%{major}*
 
 %files -n %{develname}
-%{_includedir}/%{appname}
+#{_includedir}/%{appname}
 %{_libdir}/cmake/%{appname}
 %{_libdir}/pkgconfig/%{appname}.pc
 %{_libdir}/lib*%{appname}.so
