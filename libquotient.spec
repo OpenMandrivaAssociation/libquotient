@@ -30,6 +30,7 @@ BuildRequires:	qmake5
 BuildRequires:	ninja
 BuildRequires:	cmake
 # qt6
+BuildRequires:  cmake(Qt6)
 BuildRequires:	cmake(Qt6Core)
 BuildRequires:	cmake(Qt6Keychain)
 BuildRequires:	cmake(Qt6Widgets)
