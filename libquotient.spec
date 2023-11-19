@@ -38,6 +38,7 @@ BuildRequires:	cmake(Qt6Network)
 BuildRequires:	cmake(Qt6Multimedia)
 BuildRequires:	cmake(Qt6Concurrent)
 BuildRequires:	cmake(Qt6LinguistTools)
+BuildRequires:	cmake(Qt6Sql)
 BuildRequires:	cmake(Qt6Test)
 
 %description
