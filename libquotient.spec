@@ -80,6 +80,7 @@ rm -rf 3rdparty
 # As of libquotient 0.7 and Clang 16, crashing during compilation.
 export CC=gcc
 export CXX=g++
+export CMAKE_BUILD_DIR=build-qt5
 %cmake -G Ninja \
     -DCMAKE_BUILD_TYPE=Release \
     -DQuotient_INSTALL_TESTS:BOOL=OFF \
@@ -88,7 +89,8 @@ export CXX=g++
     -DCMAKE_INSTALL_INCLUDEDIR:PATH="include/%{appname}"
 
 cd ..
-CMAKE_BUILD_DIR=build-qt6 %cmake \
+export CMAKE_BUILD_DIR=build-qt6
+%cmake \
     -G Ninja \
     -DBUILD_WITH_QT6:BOOL=ON \
     -DCMAKE_BUILD_TYPE=Release \
@@ -96,14 +98,14 @@ CMAKE_BUILD_DIR=build-qt6 %cmake \
     -DQuotient_INSTALL_EXAMPLE:BOOL=OFF \
     -DQuotient_ENABLE_E2EE:BOOL=ON \
     -DCMAKE_INSTALL_INCLUDEDIR:PATH="include/%{appname}"
+cd ..
 
-
-%ninja_build
+%ninja_build -C build-qt5
 
 %ninja_build -C build-qt6
 
 %install
-%ninja_install -C build
+%ninja_install -C build-qt5
 rm -rf %{buildroot}%{_datadir}/ndk-modules
 
 %ninja_install -C build-qt6
