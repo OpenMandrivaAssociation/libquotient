@@ -1,15 +1,15 @@
 %global appname Quotient
 %define major 0
-%define libname %mklibname %{appname} %{major}
+%define oldlibname %mklibname %{appname} 0
+%define libname %mklibname %{appname}
 %define develname %mklibname -d %{appname}
 %define libqt6name %mklibname %{appname}Qt6
 %define develqt6name %mklibname -d %{appname}Qt6
-# With stable release 0.7.0 please don't go with git again (as long as it is not very necessary), just switch to stable release.
 #define git 20221202
 
 Name:		libquotient
 Version:	0.8.1.2
-Release:	%{?git:0.%{git}.}2
+Release:	%{?git:0.%{git}.}3
 Group:		System/Libraries
 License:	LGPLv2+
 URL:		https://github.com/quotient-im/libQuotient
@@ -52,6 +52,7 @@ older use the previous name - libQMatrixClient.
 Summary:	Library for the Quotient project aims to produce a Qt5-based SDK to develop applications.
 Group:		System/Libraries
 %rename	%{_lib}quotient0
+%rename %{oldlibname}
 
 %description -n %{libname}
 Library for the Quotient project aims to produce a Qt5-based SDK to develop applications
