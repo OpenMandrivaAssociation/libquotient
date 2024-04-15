@@ -8,8 +8,8 @@
 #define git 20221202
 
 Name:		libquotient
-Version:	0.8.1.2
-Release:	%{?git:0.%{git}.}3
+Version:	0.8.2
+Release:	%{?git:0.%{git}.}1
 Group:		System/Libraries
 License:	LGPLv2+
 URL:		https://github.com/quotient-im/libQuotient
