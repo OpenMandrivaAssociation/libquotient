@@ -142,7 +142,7 @@ rm -rf %{buildroot}%{_datadir}/ndk-modules
 %files -n %{libname}
 %license COPYING
 %doc README.md CONTRIBUTING.md SECURITY.md
-%{_libdir}/lib*%{appname}.so.%{major}*
+#{_libdir}/lib*%{appname}.so.%{major}*
 
 %files -n %{develname}
 %{_includedir}/%{appname}
