@@ -148,7 +148,7 @@ rm -rf %{buildroot}%{_datadir}/ndk-modules
 %{_includedir}/%{appname}
 %{_libdir}/cmake/%{appname}
 %{_libdir}/pkgconfig/%{appname}.pc
-%{_libdir}/lib*%{appname}.so
+#{_libdir}/lib*%{appname}.so
 
 #-------------------------------
 %files -n %{libqt6name}
