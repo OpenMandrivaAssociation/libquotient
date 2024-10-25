@@ -146,8 +146,8 @@ rm -rf %{buildroot}%{_datadir}/ndk-modules
 
 %files -n %{develname}
 %{_includedir}/%{appname}
-%{_libdir}/cmake/%{appname}
-%{_libdir}/pkgconfig/%{appname}.pc
+#{_libdir}/cmake/%{appname}
+#{_libdir}/pkgconfig/%{appname}.pc
 #{_libdir}/lib*%{appname}.so
 
 #-------------------------------
