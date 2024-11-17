@@ -71,7 +71,6 @@ older use the previous name - libQMatrixClient.
 rm -rf 3rdparty
 
 %build
-export CMAKE_BUILD_DIR=build-qt6
 %cmake \
     -G Ninja \
     -DBUILD_WITH_QT6:BOOL=ON \
@@ -81,10 +80,10 @@ export CMAKE_BUILD_DIR=build-qt6
     -DQuotient_ENABLE_E2EE:BOOL=ON \
     -DCMAKE_INSTALL_INCLUDEDIR:PATH="include/%{appname}"
 
-%ninja_build -C build-qt6
+%ninja_build
 
 %install
-%ninja_install -C build-qt6
+%ninja_install -C build
 rm -rf %{buildroot}%{_datadir}/ndk-modules
 
 #-------------------------------
