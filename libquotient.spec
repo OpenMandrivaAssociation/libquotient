@@ -91,6 +91,7 @@ rm -rf %{buildroot}%{_datadir}/ndk-modules
 %{_libdir}/libQuotientQt6.so.%{major}*
 
 %files -n %{develqt6name}
+%{_includedir}/Quotient/
 %{_libdir}/libQuotientQt6.so
 %{_libdir}/pkgconfig/QuotientQt6.pc
 %{_libdir}/cmake/QuotientQt6/
