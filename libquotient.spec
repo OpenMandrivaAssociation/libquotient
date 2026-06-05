@@ -9,7 +9,7 @@
 
 Name:		libquotient
 Version:	0.9.6.1
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 Group:		System/Libraries
 License:	LGPLv2+
 URL:		https://github.com/quotient-im/libQuotient
