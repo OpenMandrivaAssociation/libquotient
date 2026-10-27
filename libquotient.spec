@@ -9,12 +9,14 @@
 
 Name:		libquotient
 Version:	0.9.6.1
-Release:	%{?git:0.%{git}.}2
+Release:	%{?git:0.%{git}.}3
 Group:		System/Libraries
 License:	LGPLv2+
 URL:		https://github.com/quotient-im/libQuotient
 Summary:	Qt6 library to write cross-platform clients for Matrix
 Source0:	https://github.com/quotient-im/libQuotient/archive/%{?git:master}%{!?git:%{version}}/lib%{appname}-%{?git:%{git}}%{!?git:%{version}}.tar.gz
+# NeoChat 26.08 imports io.github.quotient_im.libquotient for KeyImport.
+Patch0:		libquotient-qml-keyimport.patch
 BuildRequires:	cmake(Olm)
 BuildRequires:	cmake(QtOlm)
 BuildRequires:	pkgconfig(openssl)
@@ -31,6 +33,8 @@ BuildRequires:	cmake(Qt6Concurrent)
 BuildRequires:	cmake(Qt6LinguistTools)
 BuildRequires:	cmake(Qt6Sql)
 BuildRequires:	cmake(Qt6Test)
+BuildRequires:	cmake(Qt6Qml)
+BuildRequires:	cmake(ECM)
 
 %description
 The Quotient project aims to produce a Qt5-based SDK to develop applications
@@ -89,6 +93,7 @@ rm -rf %{buildroot}%{_datadir}/ndk-modules
 #-------------------------------
 %files -n %{libqt6name}
 %{_libdir}/libQuotientQt6.so.%{major}*
+%{_libdir}/qt6/qml/io/github/quotient_im/libquotient/
 
 %files -n %{develqt6name}
 %{_includedir}/Quotient/
